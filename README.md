@@ -18,19 +18,14 @@ brew install mad01/tap/csl
 | keep | Assertion store with evidence pins | 7431 |
 | present | HTML briefing pages, authored as JSON | 7423 |
 | speak | Reads markdown aloud (local TTS) | 7425 |
-| catalog | Service catalog from `service-info.yaml` files | 7575 |
-| deps | Dependency scanner against OSV.dev advisories | 7429 |
-| events | Local event and audit log | 7430 |
-| status | Uptime page for the local fleet | 7426 |
 | d-man | `.this` front door: `/etc/hosts` + reverse proxy | 80/443 (root) |
 | belt | Claude Code guard hooks | — |
-| suspenders | Git secret scanner + pre-commit hooks | — |
 | t-man | Declarative launchd manager | — |
 | ralph | Fleet installer, reconciles TOML recipes | — |
 
 Install with the tap-qualified name (`brew install mad01/tap/keep`, not
-`keep`): homebrew casks named `keep` and `status` already exist, and the
-qualified form never collides.
+`keep`): a homebrew cask named `keep` already exists, and the qualified
+form never collides.
 
 ## Running services: brew services or t-man
 
