@@ -1,9 +1,9 @@
 class Suspenders < Formula
   desc "Git secret scanner and pre-commit hook orchestrator"
   homepage "https://github.com/mad01/thismoon"
-  url "https://github.com/mad01/thismoon/releases/download/suspenders/v0.3.1/suspenders_v0.3.1_darwin_arm64.tar.gz"
-  version "0.3.1"
-  sha256 "550cc79365e95328a3197d930cda2f8271c2cef3052bbcfd53f411187c92c684"
+  url "https://github.com/mad01/thismoon/releases/download/suspenders/v0.3.2/suspenders_v0.3.2_darwin_arm64.tar.gz"
+  version "0.3.2"
+  sha256 "9136efb2b2639937a21baef6b81ad7767e7ba136478ea62bd3f3201586dde473"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64
@@ -21,8 +21,6 @@ class Suspenders < Formula
   end
 
   test do
-    # The v0.3.1 tarball was built without version ldflags and reports
-    # "suspenders dev"; match the name until a rebuilt release ships.
-    assert_match "suspenders", shell_output("#{bin}/suspenders version")
+    assert_match version.to_s, shell_output("#{bin}/suspenders version")
   end
 end

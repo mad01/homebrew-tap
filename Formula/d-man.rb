@@ -1,9 +1,9 @@
 class DMan < Formula
   desc "Local .this front door: managed /etc/hosts entries and reverse proxy"
   homepage "https://github.com/mad01/thismoon"
-  url "https://github.com/mad01/thismoon/releases/download/d-man/v0.3.0/d-man_v0.3.0_darwin_arm64.tar.gz"
-  version "0.3.0"
-  sha256 "70c8739d33cf9f99ad1d2fd1fee6332da3fdc88c03fa224238f62fb65bdf60b6"
+  url "https://github.com/mad01/thismoon/releases/download/d-man/v0.3.1/d-man_v0.3.1_darwin_arm64.tar.gz"
+  version "0.3.1"
+  sha256 "3ea6d588b5da45bad988d2415a68a24075ae4f328ccbd297802ffb404a0884e4"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64
@@ -24,10 +24,14 @@ class DMan < Formula
   def caveats
     <<~EOS
       d-man rewrites /etc/hosts and binds low ports, so the service runs as
-      root:
+      root. Root has no useful HOME, so put the routes file at the system
+      path, then start the service:
+        sudo mkdir -p /etc/d-man
+        sudo cp your-routes.toml /etc/d-man/routes.toml
         sudo brew services start mad01/tap/d-man
 
-      Configure routes first; `d-man list` shows what is active.
+      `d-man list` shows the active routes. After a brew upgrade, restart:
+        sudo brew services restart mad01/tap/d-man
     EOS
   end
 
