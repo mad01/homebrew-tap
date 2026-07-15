@@ -1,9 +1,9 @@
 class Csl < Formula
   desc "Code search over local git checkouts with web UI, CLI, and MCP server"
   homepage "https://github.com/mad01/thismoon"
-  url "https://github.com/mad01/thismoon/releases/download/csl/v0.7.1/csl_v0.7.1_darwin_arm64.tar.gz"
-  version "0.7.1"
-  sha256 "4a690a61f5129744b37d1afc35529c337d8b95155048ca86d446f3fb2e501d3a"
+  url "https://github.com/mad01/thismoon/releases/download/csl/v0.7.2/csl_v0.7.2_darwin_arm64.tar.gz"
+  version "0.7.2"
+  sha256 "b2c3bf15946a1d9bd7d796e6f4e32419159dff24e71939e35c6c550a8284b4d8"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64
