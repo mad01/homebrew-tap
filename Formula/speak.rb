@@ -25,6 +25,11 @@ class Speak < Formula
       Start the server (http://127.0.0.1:7425) as a background service:
         brew services start mad01/tap/speak
 
+      speak fronts an OpenAI-compatible TTS server on 127.0.0.1:8765 and does
+      not install one. Without it the page loads but audio requests return
+      502. Run a local engine (e.g. mlx-audio serving Kokoro) on that port,
+      or point speak at another engine with --tts-url / SPEAK_TTS_URL.
+
       Register the MCP server with Claude Code:
         claude mcp add speak -- speak mcp
     EOS

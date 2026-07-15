@@ -13,6 +13,24 @@ class Belt < Formula
     bin.install "belt"
   end
 
+  def caveats
+    <<~EOS
+      Wire belt into ~/.claude/settings.json — the event argument is belt's
+      guard event (lowercase), not the Claude Code tool name:
+
+        "hooks": {
+          "PreToolUse": [
+            {"matcher": "Bash",
+             "hooks": [{"type": "command", "command": "belt hook bash"}]},
+            {"matcher": "Write|Edit",
+             "hooks": [{"type": "command", "command": "belt hook write"}]}
+          ]
+        }
+
+      Hook changes take effect in the next Claude Code session.
+    EOS
+  end
+
   test do
     assert_match version.to_s, shell_output("#{bin}/belt version")
   end

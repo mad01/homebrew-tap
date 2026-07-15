@@ -22,6 +22,11 @@ class Csl < Formula
 
   def caveats
     <<~EOS
+      First run: tell csl where your repos live, then build the index:
+        mkdir -p ~/.config/csl
+        printf 'dirs:\n  - ~/code\n' > ~/.config/csl/config.yaml
+        csl index --all
+
       Start the web UI (http://127.0.0.1:7424) as a background service:
         brew services start mad01/tap/csl
 
