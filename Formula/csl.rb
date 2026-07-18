@@ -1,9 +1,9 @@
 class Csl < Formula
   desc "Code search over local git checkouts with web UI, CLI, and MCP server"
   homepage "https://github.com/mad01/thismoon"
-  url "https://github.com/mad01/thismoon/releases/download/csl/v0.7.2/csl_v0.7.2_darwin_arm64.tar.gz"
-  version "0.7.2"
-  sha256 "b2c3bf15946a1d9bd7d796e6f4e32419159dff24e71939e35c6c550a8284b4d8"
+  url "https://github.com/mad01/thismoon/releases/download/csl/v0.8.0/csl_v0.8.0_darwin_arm64.tar.gz"
+  version "0.8.0"
+  sha256 "9bb78710d15be8db4b4e47dae0835b01573416e82cbc118c49eba2c3adba0529"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64
@@ -32,6 +32,13 @@ class Csl < Formula
 
       Register the MCP server with Claude Code:
         claude mcp add csl -- csl mcp
+
+      Optional shell helpers, add to ~/.zshrc:
+        repo-sync() { csl sync; }
+        repo() { local d=$(csl repo "$@"); [[ -n "$d" ]] && cd "$d"; }
+      repo-sync pulls every repo (ff-only) and reindexes what changed.
+      repo jumps to a repo: `repo <query>` cd's straight to the match,
+      bare `repo` opens a fuzzy picker.
     EOS
   end
 
