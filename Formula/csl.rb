@@ -32,6 +32,13 @@ class Csl < Formula
 
       Register the MCP server with Claude Code:
         claude mcp add csl -- csl mcp
+
+      Optional shell helpers, add to ~/.zshrc:
+        repo-sync() { csl sync; }
+        repo() { local d=$(csl repo "$@"); [[ -n "$d" ]] && cd "$d"; }
+      repo-sync pulls every repo (ff-only) and reindexes what changed.
+      repo jumps to a repo: `repo <query>` cd's straight to the match,
+      bare `repo` opens a fuzzy picker.
     EOS
   end
 
