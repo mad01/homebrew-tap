@@ -27,18 +27,26 @@ Install with the tap-qualified name (`brew install mad01/tap/keep`, not
 `keep`): a homebrew cask named `keep` already exists, and the qualified
 form never collides.
 
-## Running services: brew services or t-man
+## Running services: t-man or brew services
 
-Every service formula ships a service block, so Homebrew's own launchd
-integration runs it:
+t-man (in this tap) is the recommended manager: one `t-man add` line is
+idempotent across re-runs, and `--sandbox-profile` wraps the service in a
+seatbelt sandbox through `sandbox-exec`, which brew services can't do.
+
+```sh
+brew install mad01/tap/t-man
+t-man add --name csl-web -- $(brew --prefix)/bin/csl web
+```
+
+Every service formula also ships a service block, so Homebrew's own launchd
+integration works with zero setup:
 
 ```sh
 brew services start mad01/tap/csl     # web UI on http://127.0.0.1:7424
 ```
 
-t-man, the fleet's launchd manager, does the same job. Pick ONE manager per
-service — both write launchd jobs, and two jobs running the same binary
-fight over the port.
+Whichever you choose, pick ONE manager per service — both write launchd
+jobs, and two jobs running the same binary fight over the port.
 
 ### d-man, the root exception
 
@@ -46,14 +54,15 @@ d-man is what turns `127.0.0.1:7424` into `http://csl.this/`: it keeps a
 managed block in `/etc/hosts` and reverse-proxies `:80`/`:443` by hostname,
 which needs root. Two ways to run it:
 
-- **brew services** (needs d-man 0.3.1 or later): put your routes at
-  `/etc/d-man/routes.toml`, then `sudo brew services start mad01/tap/d-man`.
 - **t-man**, one-time registration against a per-user routes file:
 
   ```sh
   sudo t-man --daemon add --name d-man -- \
     $(brew --prefix)/bin/d-man serve --config $HOME/.config/d-man/routes.toml
   ```
+
+- **brew services** (needs d-man 0.3.1 or later): put your routes at
+  `/etc/d-man/routes.toml`, then `sudo brew services start mad01/tap/d-man`.
 
 Without d-man everything still works on `http://127.0.0.1:<port>` — the
 hostnames are the only thing you lose.
