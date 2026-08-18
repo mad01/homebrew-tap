@@ -15,17 +15,13 @@ brew install mad01/tap/csl
 | Formula | What it is | Service port |
 |---------|------------|--------------|
 | csl | Code search: web UI, CLI, MCP server | 7424 |
-| keep | Assertion store with evidence pins | 7431 |
+| kof | keeper-of-facts: assertion store with evidence pins | 7431 |
 | present | HTML briefing pages, authored as JSON | 7423 |
 | speak | Reads markdown aloud (local TTS) | 7425 |
 | d-man | `.this` front door: `/etc/hosts` + reverse proxy | 80/443 (root) |
 | belt | Claude Code guard hooks | — |
 | t-man | Declarative launchd manager | — |
 | ralph | Fleet installer, reconciles TOML recipes | — |
-
-Install with the tap-qualified name (`brew install mad01/tap/keep`, not
-`keep`): a homebrew cask named `keep` already exists, and the qualified
-form never collides.
 
 ## Running services: t-man or brew services
 

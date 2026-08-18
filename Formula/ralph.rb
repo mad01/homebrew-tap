@@ -1,9 +1,9 @@
 class Ralph < Formula
   desc "Declarative machine reconciler driven by TOML recipes"
   homepage "https://github.com/mad01/ralph"
-  url "https://github.com/mad01/ralph/releases/download/v0.2.0/ralph_0.2.0_darwin_arm64.tar.gz"
-  version "0.2.0"
-  sha256 "ba2d4587d1578869d1a55c1846ab5aa4ea41c432c2466bea93e57891bb80f8f7"
+  url "https://github.com/mad01/ralph/releases/download/v0.3.0/ralph_0.3.0_darwin_arm64.tar.gz"
+  version "0.3.0"
+  sha256 "29b5fd25bcb67d5bb079d9bea41d1e07360e7d2ab149a9d4b9d48a1e8cac80a8"
   license "MIT"
 
   depends_on arch: :arm64
