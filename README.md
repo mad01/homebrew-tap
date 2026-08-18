@@ -21,7 +21,13 @@ brew install mad01/tap/csl
 | d-man | `.this` front door: `/etc/hosts` + reverse proxy | 80/443 (root) |
 | belt | Claude Code guard hooks | — |
 | t-man | Declarative launchd manager | — |
+| toss-bin | Safe `rm` replacement: moves files to a dated trash folder | — |
 | ralph | Fleet installer, reconciles TOML recipes | — |
+
+Heads up: thismoon is still a private repo, and Homebrew can't fetch
+release assets from a private repo, so every formula except `ralph`
+fails to download without access to it. The formulas start working for
+everyone the moment thismoon goes public; `ralph` installs today.
 
 ## Running services: t-man or brew services
 
