@@ -1,9 +1,9 @@
 class TossBin < Formula
   desc "Safe rm replacement for macOS that trashes to dated ~/.Trash folders"
   homepage "https://github.com/mad01/thismoon"
-  url "https://github.com/mad01/thismoon/releases/download/toss-bin/v1.2.0/toss-bin_v1.2.0_darwin_arm64.tar.gz"
-  version "1.2.0"
-  sha256 "60bbeebe8c1ccaac5a64e03ca99a9815239bae3f19298fb8ac7f4eec6b7180d0"
+  url "https://github.com/mad01/thismoon/releases/download/toss-bin/v1.3.0/toss-bin_v1.3.0_darwin_arm64.tar.gz"
+  version "1.3.0"
+  sha256 "dec041578bef597059ccd9f93b3e999ea8bf5ed2e92f6f495d9222923fcadebd"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64

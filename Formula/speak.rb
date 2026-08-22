@@ -1,9 +1,9 @@
 class Speak < Formula
   desc "Reads markdown aloud through a local TTS model"
   homepage "https://github.com/mad01/thismoon"
-  url "https://github.com/mad01/thismoon/releases/download/speak/v0.3.0/speak_v0.3.0_darwin_arm64.tar.gz"
-  version "0.3.0"
-  sha256 "167fa4803db6701e954e2fc1326dfcbcf318571ee5db41c85a9f5b0364ec5d61"
+  url "https://github.com/mad01/thismoon/releases/download/speak/v0.5.1/speak_v0.5.1_darwin_arm64.tar.gz"
+  version "0.5.1"
+  sha256 "fbec48e6f2de187ace08f7af1aca920623ec824ba2ba7f425394c147f9439484"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64
