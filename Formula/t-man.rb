@@ -3,7 +3,7 @@ class TMan < Formula
   homepage "https://github.com/mad01/thismoon"
   url "https://github.com/mad01/thismoon/releases/download/t-man/v0.4.0/t-man_v0.4.0_darwin_arm64.tar.gz"
   version "0.4.0"
-  sha256 "c914f2959f4c72c186a5d1a1402fabe39a8974e0ace28256f44ad39cce21a99d"
+  sha256 "94c1324ae936b3534fe7667cc94f4f8bce36f54c1c754f3125846baf58e5aa6a"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64

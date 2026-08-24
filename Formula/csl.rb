@@ -3,7 +3,7 @@ class Csl < Formula
   homepage "https://github.com/mad01/thismoon"
   url "https://github.com/mad01/thismoon/releases/download/csl/v0.13.0/csl_v0.13.0_darwin_arm64.tar.gz"
   version "0.13.0"
-  sha256 "d0c54513762f5adab16f6377096f070ee8aae796b8e55f15ef55d1749a3ba3fc"
+  sha256 "4e6ab5348553f7612fb0d9de080a2fedafd38029e5ec9a23f8916cc7b7cfa670"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64

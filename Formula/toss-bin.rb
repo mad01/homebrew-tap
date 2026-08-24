@@ -3,7 +3,7 @@ class TossBin < Formula
   homepage "https://github.com/mad01/thismoon"
   url "https://github.com/mad01/thismoon/releases/download/toss-bin/v1.3.0/toss-bin_v1.3.0_darwin_arm64.tar.gz"
   version "1.3.0"
-  sha256 "dec041578bef597059ccd9f93b3e999ea8bf5ed2e92f6f495d9222923fcadebd"
+  sha256 "c762e0618c45f77e693edd91df06374b608b8b7c34705053d3fb05b46172db94"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64

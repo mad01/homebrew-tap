@@ -3,7 +3,7 @@ class DMan < Formula
   homepage "https://github.com/mad01/thismoon"
   url "https://github.com/mad01/thismoon/releases/download/d-man/v0.6.0/d-man_v0.6.0_darwin_arm64.tar.gz"
   version "0.6.0"
-  sha256 "6fb1f3efd93f12c50660aee000e4f58d28f840e6716adfdaad51f4b9d734bcbe"
+  sha256 "201cbee2d4ed5fb67ccd9922744acc2fcc8c7fa514dc89ab3567896c6d0dda4a"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64

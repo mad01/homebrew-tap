@@ -1,9 +1,9 @@
 class Kof < Formula
   desc "keeper-of-facts: assertion store with evidence pins, claims go stale with the code"
   homepage "https://github.com/mad01/thismoon"
-  url "https://github.com/mad01/thismoon/releases/download/keeper-of-facts/v0.11.1/kof_v0.11.1_darwin_arm64.tar.gz"
-  version "0.11.1"
-  sha256 "98c2a7caf616683475987f104cb507eef3e94ef715dfc9962ca7018213fc118d"
+  url "https://github.com/mad01/thismoon/releases/download/keeper-of-facts/v0.12.0/kof_v0.12.0_darwin_arm64.tar.gz"
+  version "0.12.0"
+  sha256 "fc46fde5a4c3e3c5d12278b9547c66b8e6596b050eaba5e0f832152c2066333f"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64

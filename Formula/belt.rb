@@ -3,7 +3,7 @@ class Belt < Formula
   homepage "https://github.com/mad01/thismoon"
   url "https://github.com/mad01/thismoon/releases/download/belt/v0.16.0/belt_v0.16.0_darwin_arm64.tar.gz"
   version "0.16.0"
-  sha256 "553e349b2b248bd71e9cb67e592b820e8f661d83ed5d9c22cf01d66ff23f9c2d"
+  sha256 "3edfd87e5dd93fb71d4cbb9dfdd3c8c154519eaf40f721e1e66a0136fb6f48f1"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64
