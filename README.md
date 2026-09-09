@@ -27,7 +27,10 @@ brew install mad01/tap/csl
 Heads up: thismoon is still a private repo, and Homebrew can't fetch
 release assets from a private repo, so every formula except `ralph`
 fails to download without access to it. The formulas start working for
-everyone the moment thismoon goes public; `ralph` installs today.
+everyone the moment thismoon goes public; `ralph` installs today. If you
+have read access now, [mise](https://mise.jdx.dev) installs the same
+release tarballs with a `MISE_GITHUB_TOKEN`; see
+[mise while private](#mise-while-thismoon-is-private) below.
 
 ## Running services: t-man or brew services
 
@@ -85,6 +88,26 @@ The thismoon formulas download release tarballs from the thismoon repo.
 Until that repo is public, their `brew install` gets a 404 — this tap is
 prepared ahead of the flip and starts working the moment thismoon does.
 `ralph` comes from a public repo and installs today.
+
+### mise while thismoon is private
+
+The alternative that works today for a standalone install is
+[mise](https://mise.jdx.dev). Its `github` backend fetches private release
+assets with `MISE_GITHUB_TOKEN`, and one `mise use` per component mirrors
+one `brew install`:
+
+```sh
+export MISE_GITHUB_TOKEN=$(gh auth token)   # any token with read access to thismoon
+mise use -g "github:mad01/thismoon[exe=csl,tag_regex=^csl/]"
+```
+
+`exe` names the binary inside the tarball and `tag_regex` picks the
+component's tags out of the shared release feed. Both match the formula
+name for every tool here except kof, which takes
+`exe=kof,tag_regex=^keeper-of-facts/`. The
+[mise section](https://github.com/mad01/thismoon/blob/main/docs/GETTING-STARTED.md#one-tool-with-mise)
+of the thismoon guide has the full list, the several-components form, and
+what changes once the repo is public (nothing but the token).
 
 ## License
 
