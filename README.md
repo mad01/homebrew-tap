@@ -93,19 +93,20 @@ prepared ahead of the flip and starts working the moment thismoon does.
 
 The alternative that works today for a standalone install is
 [mise](https://mise.jdx.dev). Its `github` backend fetches private release
-assets with `MISE_GITHUB_TOKEN`, and one `mise use` per component mirrors
-one `brew install`:
+assets with `MISE_GITHUB_TOKEN`, and a tool alias plus one `mise use` per
+component mirrors one `brew install`:
 
 ```sh
 export MISE_GITHUB_TOKEN=$(gh auth token)   # any token with read access to thismoon
-mise use -g "github:mad01/thismoon[exe=csl,tag_regex=^csl/]"
+mise tool-alias set csl github:mad01/thismoon
+mise use -g "csl[version_prefix=csl/]"
 ```
 
-`exe` names the binary inside the tarball and `tag_regex` picks the
-component's tags out of the shared release feed. Both match the formula
-name for every thismoon tool here except kof, whose tag prefix is the
-service name: `exe=kof,tag_regex=^keeper-of-facts/`. ralph lives in its own
-repo with plain tags and needs no options: `mise use -g github:mad01/ralph`.
+The alias is the binary name and `version_prefix` picks the component's
+tags out of the shared release feed. Both are the formula name for every
+thismoon tool here except kof, whose prefix is the service name:
+`kof[version_prefix=keeper-of-facts/]`. ralph lives in its own repo with
+plain tags and needs no alias: `mise use -g github:mad01/ralph`.
 The
 [mise section](https://github.com/mad01/thismoon/blob/main/docs/GETTING-STARTED.md#one-tool-with-mise)
 of the thismoon guide has the full list, the several-components form, and
