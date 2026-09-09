@@ -103,8 +103,10 @@ mise use -g "github:mad01/thismoon[exe=csl,tag_regex=^csl/]"
 
 `exe` names the binary inside the tarball and `tag_regex` picks the
 component's tags out of the shared release feed. Both match the formula
-name for every tool here except kof, which takes
-`exe=kof,tag_regex=^keeper-of-facts/`. The
+name for every thismoon tool here except kof, whose tag prefix is the
+service name: `exe=kof,tag_regex=^keeper-of-facts/`. ralph lives in its own
+repo with plain tags and needs no options: `mise use -g github:mad01/ralph`.
+The
 [mise section](https://github.com/mad01/thismoon/blob/main/docs/GETTING-STARTED.md#one-tool-with-mise)
 of the thismoon guide has the full list, the several-components form, and
 what changes once the repo is public (nothing but the token).
