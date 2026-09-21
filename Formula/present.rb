@@ -1,9 +1,9 @@
 class Present < Formula
   desc "Single-page HTML briefings, authored as structured JSON"
   homepage "https://github.com/mad01/thismoon"
-  url "https://github.com/mad01/thismoon/releases/download/present/v1.0.0/present_v1.0.0_darwin_arm64.tar.gz"
-  version "1.0.0"
-  sha256 "b40b02cdb328472c5af23bdc457e6f8cab0940b8c3aac55c0e739aa8ff5c3def"
+  url "https://github.com/mad01/thismoon/releases/download/present/v1.3.0/present_v1.3.0_darwin_arm64.tar.gz"
+  version "1.3.0"
+  sha256 "3ca584621e502d61b878d4e2f9897474bd9db94dafb839cc1b81e53886962590"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64

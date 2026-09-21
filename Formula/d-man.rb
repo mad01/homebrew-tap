@@ -1,9 +1,9 @@
 class DMan < Formula
   desc "Local .this front door: managed /etc/hosts entries and reverse proxy"
   homepage "https://github.com/mad01/thismoon"
-  url "https://github.com/mad01/thismoon/releases/download/d-man/v0.6.0/d-man_v0.6.0_darwin_arm64.tar.gz"
-  version "0.6.0"
-  sha256 "201cbee2d4ed5fb67ccd9922744acc2fcc8c7fa514dc89ab3567896c6d0dda4a"
+  url "https://github.com/mad01/thismoon/releases/download/d-man/v0.6.1/d-man_v0.6.1_darwin_arm64.tar.gz"
+  version "0.6.1"
+  sha256 "d0fe0e6597d23c1bfca06b0f4883e2b3058b6dbc2de3e4885c02dce42f451b9c"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64

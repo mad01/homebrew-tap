@@ -1,9 +1,9 @@
 class Belt < Formula
   desc "Guard hooks for Claude Code: blocks push-to-main and unsafe writes"
   homepage "https://github.com/mad01/thismoon"
-  url "https://github.com/mad01/thismoon/releases/download/belt/v0.19.0/belt_v0.19.0_darwin_arm64.tar.gz"
-  version "0.19.0"
-  sha256 "1cb1e15927b48092fe4f9a02c022d43761d946a8d2baa7feab97ba103590d9ab"
+  url "https://github.com/mad01/thismoon/releases/download/belt/v2.3.0/belt_v2.3.0_darwin_arm64.tar.gz"
+  version "2.3.0"
+  sha256 "4b9997ed926e2692e2d78ddcfdd46836b693bc742e478bb0bbedde67e99703fb"
   license "BSD-3-Clause"
 
   depends_on arch: :arm64
